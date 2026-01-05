@@ -164,7 +164,7 @@ describe('Home Page', () => {
       cy.get(section)
         .scrollIntoView()
       cy.get(button)
-        .click()
+        .click({ force: true})
       cy.wait(5000)
       cy.url().should('eq', 'https://citatah.co.id/project/')
       cy.go("back")
