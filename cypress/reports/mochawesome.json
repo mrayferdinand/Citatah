@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-01-05T06:21:58.902Z",
+    "end": "2026-01-05T06:22:57.461Z",
+    "duration": 58559,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "12c871ee-4e87-4cc4-b012-575c07a303a6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\homepage.cy.js",
+      "file": "cypress\\e2e\\homepage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "81aa3d1f-9e83-460f-a8e2-d97f230defe7",
+          "title": "Home Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hero Section",
+              "fullTitle": "Home Page Hero Section",
+              "timedOut": null,
+              "duration": 18129,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Validate 'Download Catalogue'\ncy.get('#brxe-uppujw > div > span').click();\ncy.get('#wpcf7-f4482-o2 > form > p:nth-child(2) > span > input').type('Rayhan');\ncy.get('#wpcf7-f4482-o2 > form > p:nth-child(3) > span > input').type('rayhan@avonetiq.id');\ncy.get('#wpcf7-f4482-o2 > form > p:nth-child(4) > span > input').type('81234567890');\ncy.get('#wpcf7-f4482-o2 > form > p:nth-child(5)').click();\ncy.wait(5000);\ncy.url().should('include', '/catalogue');\ncy.go(\"back\");\n// Validate 'WhatsApp'\ncy.get('#brxe-ncscmv').click();\ncy.wait(5000);\ncy.get('a[href*=\"api.whatsapp.com/send\"]').should('have.attr', 'href').and('include', 'phone=%2B6287765833437');",
+              "err": {},
+              "uuid": "184fd18e-8bfc-47a7-8509-15d5ff3ba23e",
+              "parentUUID": "81aa3d1f-9e83-460f-a8e2-d97f230defe7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2nd Section",
+              "fullTitle": "Home Page 2nd Section",
+              "timedOut": null,
+              "duration": 23415,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Validate 'Download Catalogue'\ncy.get('#brxe-wqtkwx').scrollIntoView();\ncy.get('#brxe-gcxmml > a').click();\ncy.get('#wpcf7-f4482-o2 > form > p:nth-child(2) > span > input').type('Rayhan');\ncy.get('#wpcf7-f4482-o2 > form > p:nth-child(3) > span > input').type('rayhan@avonetiq.id');\ncy.get('#wpcf7-f4482-o2 > form > p:nth-child(4) > span > input').type('81234567890');\ncy.get('#wpcf7-f4482-o2 > form > p:nth-child(5)').click();\ncy.wait(5000);\ncy.url().should('include', '/catalogue');\ncy.go(\"back\");\n// Validate 'Contact Us'\ncy.get('#brxe-wqtkwx').scrollIntoView();\ncy.get('#brxe-uykyda').click();\ncy.get('#wpcf7-f4486-o1 > form > p:nth-child(2) > span > input').type('Rayhan');\ncy.get('#wpcf7-f4486-o1 > form > p:nth-child(3) > span > input').type('rayhan@avonetiq.id');\ncy.get('#custom-cpf').type('81234567890');\ncy.get('#wpcf7-f4486-o1 > form > p:nth-child(6)').click();\ncy.wait(5000);\ncy.url().should('include', '/catalogue');\ncy.go(\"back\");",
+              "err": {},
+              "uuid": "c1f9bb6e-38ac-47db-a1b9-c7d9e7e35efe",
+              "parentUUID": "81aa3d1f-9e83-460f-a8e2-d97f230defe7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Product Section",
+              "fullTitle": "Home Page Product Section",
+              "timedOut": null,
+              "duration": 10375,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#brxe-hbsofi > a').click();\ncy.url().should('contain', '/product');",
+              "err": {},
+              "uuid": "fccff9e1-bce2-431a-be4c-25841c9e0e61",
+              "parentUUID": "81aa3d1f-9e83-460f-a8e2-d97f230defe7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Stone Section",
+              "fullTitle": "Home Page Stone Section",
+              "timedOut": null,
+              "duration": 5388,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#brx-content > section:nth-child(6)').scrollIntoView();\nconst stones = [{\n  selector: '#brx-content > section:nth-child(6) > div > div.brxe-block.col-span-2.columns-2.gap-2xl > div:nth-child(1) > a',\n  url: '/natural-stone'\n}, {\n  selector: '#brx-content > section:nth-child(6) > div > div.brxe-block.col-span-2.columns-2.gap-2xl > div:nth-child(2) > a',\n  url: '/engineered-stone'\n}, {\n  selector: '#brx-content > section:nth-child(6) > div > div.brxe-block.col-span-2.columns-2.gap-2xl > div:nth-child(3) > a',\n  url: '/mosaic'\n}];\nstones.forEach(({\n  selector,\n  url\n}) => {\n  cy.get(selector).click();\n  cy.url().should('contain', url);\n  cy.go(\"back\");\n});",
+              "err": {},
+              "uuid": "3be902c1-c7ac-4e44-b8ed-4271bda0f218",
+              "parentUUID": "81aa3d1f-9e83-460f-a8e2-d97f230defe7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "184fd18e-8bfc-47a7-8509-15d5ff3ba23e",
+            "c1f9bb6e-38ac-47db-a1b9-c7d9e7e35efe",
+            "fccff9e1-bce2-431a-be4c-25841c9e0e61",
+            "3be902c1-c7ac-4e44-b8ed-4271bda0f218"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 57307,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
