@@ -10,7 +10,7 @@ module.exports = defineConfig({
     json: true
   },
   e2e: {
-    baseUrl: 'https://wordpress-1558210-6113754.cloudwaysapps.com/',
+    baseUrl: 'https://citatah.co.id/',
     experimentalStudio: true,
     viewportWidth: 1920,
     viewportHeight: 1080,
