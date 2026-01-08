@@ -2,14 +2,14 @@ describe('Blog', () => {
   beforeEach(() => {
     cy.visit('/blog/') // Akses Page 
   });
-
+  //discover 
   it('Discover', function() {
     cy.get('#wpcf7-f4489-o1 [name="your-name"]').type('azhar');
     cy.get('#wpcf7-f4489-o1 [name="your-email"]').type('azhar@gmail.com');
     cy.get('#wpcf7-f4489-o1 input.has-spinner').click();
     cy.get('#brxe-qywidj').should('have.text', 'Thank You for Subscribing');
   });
-
+  //article
   it('Article', function() {
     cy.get('#brxe-jqrvpn div:nth-child(1) > div.brxe-lhmcuy > h3.brxe-flzmkv > a').click();
     cy.wait(3000)
@@ -28,4 +28,6 @@ describe('Blog', () => {
     cy.wait(3000)
     cy.get('#brxe-wucjve').should('have.text', 'The Secret to Luxurious Design: Mix & Match Natural Stone Styles');
   });
+
+  
 });
