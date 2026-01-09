@@ -1,21 +1,30 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  // Dengan Mochawesome
-  reporter: 'mochawesome',   // <--- Tambahkan di sini
-  reporterOptions: {         // <--- Opsi konfigurasi Mochawesome
+  reporter: 'mochawesome',
+  reporterOptions: {
     reportDir: 'cypress/reports',
     overwrite: false,
     html: true,
     json: true
   },
+
   e2e: {
     baseUrl: 'https://citatah.co.id/',
     experimentalStudio: true,
     viewportWidth: 1920,
     viewportHeight: 1080,
+
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      // Anti WebDriver Detection
+      on('before:browser:launch', (browser = {}, launchOptions) => {
+        if (browser.family === 'chromium') {
+          launchOptions.args.push('--disable-blink-features=AutomationControlled')
+        }
+        return launchOptions
+      })
+
+      return config
     },
   },
 });
