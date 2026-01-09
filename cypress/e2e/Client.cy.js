@@ -1,15 +1,15 @@
 describe('Product', () => {
     beforeEach(() => {
-        cy.visit('/product') // Akses Page 
+        cy.visit('/client') // Akses Page 
     })
 
     it('Hero', () => {
-        cy.get('#brxe-iebksx > div.brxe-block.button-wrap-h.auto-width > span').click()
-        const form = [
-            { selector: '#wpcf7-f4482-o1 > form > p:nth-child(2) > span > input', value: 'Rayhan' },
-            { selector: '#wpcf7-f4482-o1 > form > p:nth-child(3) > span > input', value: 'rayhan@avonetiq.id' },
-            { selector: '#wpcf7-f4482-o1 > form > p:nth-child(4) > span > input', value: '81234567890' }
-        ]
+    cy.get('#brxe-xqqapu > span').click()
+    const form = [
+        { selector: '#wpcf7-f4482-o1 > form > p:nth-child(2) > span > input', value: 'Rayhan' },
+        { selector: '#wpcf7-f4482-o1 > form > p:nth-child(3) > span > input', value: 'rayhan@avonetiq.id' },
+        { selector: '#wpcf7-f4482-o1 > form > p:nth-child(4) > span > input', value: '81234567890' }
+    ]
 
         form.forEach(({ selector, value }) => {
             cy.get(selector).type(value)
@@ -19,17 +19,16 @@ describe('Product', () => {
         cy.url().should('include', '/catalogue')
         cy.go('back')
 
-        cy.get('#brxe-uwssgx').click()
-        cy.wait(3000)
-        cy.url().should('include', '/contact')
+    cy.get('#brxe-xqqapu > a').click()
+    cy.wait(3000)
+    cy.url().should('include', '/contact')
     })
 
-    it('Products', () => {
-        const productCard = [
-            { selector: '#brxe-lkomsi > div:nth-child(1) > a', url: 'https://citatah.co.id/product-category/natural-stone/' },
-            { selector: '#brxe-lkomsi > div:nth-child(2) > a', url: 'https://citatah.co.id/product-category/engineered-stone/' },
-            { selector: '#brxe-lkomsi > div:nth-child(3) > a', url: 'https://citatah.co.id/product-category/mosaic/' }
-        ]
+    it('Collections', () => {
+    const productCard = [
+        { selector: '#brxe-jrgmsu > a', url: 'https://citatah.co.id/product/' },
+        { selector: '#brxe-evtmhz > a', url: 'https://citatah.co.id/project/' }
+    ]
 
         productCard.forEach(({ selector, url }) => {
             cy.get(selector).click()
@@ -40,7 +39,7 @@ describe('Product', () => {
     })
 
     it('Last Section', () => {
-        cy.get('#brxe-jwnuer > div.brxe-block.button-wrap-h > span').click()
+        cy.get('#brxe-mgfqep > span').click()
         const form1 = [
             { selector: '#wpcf7-f4482-o1 > form > p:nth-child(2) > span > input', value: 'Rayhan' },
             { selector: '#wpcf7-f4482-o1 > form > p:nth-child(3) > span > input', value: 'rayhan@avonetiq.id' },
@@ -55,7 +54,7 @@ describe('Product', () => {
         cy.url().should('include', '/catalogue')
         cy.go('back')
 
-        cy.get('#brxe-tlsncy').click()
+        cy.get('#brxe-mgfqep > a').click()
         cy.url().should('include', '/contact')
     })
 });
